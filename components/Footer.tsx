@@ -44,6 +44,7 @@ export default function Footer() {
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Linkedin" className="text-white/80 hover:text-[#ffb36b] text-xl"><Linkedin /></a>
           </div>
         </div>
+        
       </div>
       <div className="w-full border-t border-white/20 mt-8 pt-4 flex flex-col md:flex-row items-center justify-between text-xs text-white/60">
         <span>© 2025. All Rights Reserved.</span>
