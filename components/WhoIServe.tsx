@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function WhoIServe() {
     return (
-        <section className="w-full py-16 px-16 bg-[#e46d13]">
+        <section className="w-full py-16 px-12 bg-[#e46d13]">
             <div className="max-w-full w-full">
                 {/* Top Heading and Content Column */}
                 <div className="w-full flex flex-col items-start bg-[#e46d13] pb-8">

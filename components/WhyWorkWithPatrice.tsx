@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function WhyWorkWithPatrice() {
   return (
-    <section className="w-full flex justify-center py-20 px-4 bg-white">
+    <section className="w-full flex justify-center py-20 px-12 bg-white">
       <div className="max-w-6xl w-full flex flex-col gap-10">
         {/* Heading and intro */}
         <div>

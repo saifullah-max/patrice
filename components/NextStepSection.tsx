@@ -3,7 +3,7 @@ import React from "react";
 
 export default function NextStepSection() {
     return (
-        <section className="relative w-full h-[560px] overflow-hidden">
+        <section className="relative w-full h-[560px] overflow-hidden px-12">
             {/* Background */}
             <div className="absolute inset-0 z-0">
                 <Image

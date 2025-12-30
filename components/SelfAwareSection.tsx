@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function SelfAwareSection() {
     return (
-        <section className="w-full flex flex-col items-center bg-[#f6f6f9]">
+        <section className="w-full flex flex-col items-center px-16">
             {/* Conversation Block */}
-            <div className="w-full bg-white flex flex-col items-center y-12 pt-24 px-2 md:px-0 shadow-md">
+            <div className="w-full flex flex-col items-center y-12 pt-24 px-2 md:px-0">
                 <div className="max-w-6xl w-full text-center">
                     <div className="text-xl md:text-3xl font-serif text-black mb-4" style={{fontFamily: "'Times New Roman', Times, serif"}}>
                         You are self-aware. You have done the work.

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function AwarenessSection() {
     return (
-        <section className="w-full flex justify-center py-0 px-6 md:px-12 bg-gradient-to-b from-[#e67c2b] to-[#DA5B00] relative overflow-hidden min-h-[700px]">
+        <section className="w-full flex justify-center py-0 px-12 md:px-12 bg-gradient-to-b from-[#e67c2b] to-[#DA5B00] relative overflow-hidden min-h-[700px]">
             <div className="max-w-[1600px] w-full mx-auto flex flex-col items-center pt-12 pb-0">
                 {/* Top: Centered Heading and Subheading */}
                 <div className="w-full flex flex-col items-center mb-8">
@@ -19,7 +19,7 @@ export default function AwarenessSection() {
                 {/* Bottom: Text left, Image right */}
                 <div className="w-full flex flex-col md:flex-row items-center justify-center">
                     {/* Left: Paragraphs */}
-                    <div className="flex-1 flex flex-col justify-center items-start max-w-[700px] md:pl-12">
+                    <div className="flex-1 flex flex-col justify-center items-start max-w-[700px] md:pl-6">
                         <div className="space-y-8 text-lg md:text-xl font-sans text-white" style={{ fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif" }}>
                             <p>Most thoughts, habits, and emotional reactions are driven by <span className="font-extrabold">subconscious patterns</span> stored in the body and nervous system — long before the mind can intervene.</p>
                             <p>That’s why talk therapy, mindset work, and willpower often reach a limit.</p>

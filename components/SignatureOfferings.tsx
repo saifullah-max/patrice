@@ -24,7 +24,7 @@ const offerings = [
 
 export default function SignatureOfferings() {
     return (
-        <section className="w-full py-16 px-16 bg-white">
+        <section className="w-full py-16 px-12 bg-white">
                 <div className="flex flex-col text-center uppercase text-xs md:text-base tracking-widest text-[#3d3246] font-sans font-semibold" style={{ fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif" }}>
                     Why Work With
                 </div>

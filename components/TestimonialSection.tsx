@@ -36,7 +36,7 @@ export default function TestimonialSection() {
     };
 
     return (
-        <section className="w-full py-12 px-16 flex flex-col items-center justify-center">
+        <section className="w-full py-12 px-12 flex flex-col items-center justify-center">
             <div className="max-w-[1600px] w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch min-h-[700px] mx-auto">
 
                 {/* Left: Text */}

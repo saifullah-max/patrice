@@ -14,7 +14,7 @@ const words = [
 
 export default function ValueScroller() {
   return (
-    <div className="w-full  bg-gradient-to-r from-[#dcb568] to-[#d4a344] py-6 border-b border-[#b97a3c] overflow-x-auto whitespace-nowrap" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+    <div className="w-full  bg-gradient-to-r from-[#dcb568] to-[#d4a344] py-6 px-12 border-b border-[#b97a3c] overflow-x-auto whitespace-nowrap" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
       <div className="flex items-center justify-center gap-6 text-white font-semibold text-2xl tracking-wide animate-marquee">
         {words.map((word, i) => (
           <span key={word} className="flex items-center gap-2">
