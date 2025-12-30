@@ -1,3 +1,4 @@
+import { Dot } from "lucide-react";
 import React from "react";
 
 const words = [
@@ -13,18 +14,18 @@ const words = [
 
 export default function ValueScroller() {
   return (
-    <div className="w-full bg-[#DA5B00] py-3 border-b border-[#b97a3c] overflow-x-auto whitespace-nowrap" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-      <div className="flex items-center justify-center gap-6 text-white font-semibold text-lg tracking-wide animate-marquee">
+    <div className="w-full  bg-gradient-to-r from-[#dcb568] to-[#d4a344] py-6 border-b border-[#b97a3c] overflow-x-auto whitespace-nowrap" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+      <div className="flex items-center justify-center gap-6 text-white font-semibold text-2xl tracking-wide animate-marquee">
         {words.map((word, i) => (
           <span key={word} className="flex items-center gap-2">
-            <span className="text-xl font-bold">*</span>
+            <span className="text-xl font-bold"><Dot size={35}/></span>
             <span>{word}</span>
           </span>
         ))}
         {/* Repeat for smooth scroll effect */}
         {words.map((word, i) => (
           <span key={word + "-repeat"} className="flex items-center gap-2">
-            <span className="text-xl font-bold">*</span>
+            <span className="text-xl font-bold"><Dot size={35}/></span>
             <span>{word}</span>
           </span>
         ))}
