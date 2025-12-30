@@ -3,11 +3,11 @@ import React from "react";
 
 export default function NextStepSection() {
     return (
-        <section className="relative w-full h-[385px] overflow-hidden">
+        <section className="relative w-full h-[560px] overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/placeholder-selfaware.png"
+                    src="/next-step.png"
                     alt="Background"
                     fill
                     priority
@@ -18,31 +18,34 @@ export default function NextStepSection() {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 h-full max-w-2xl px-6 md:px-10">
-                <div className="h-full flex flex-col justify-center translate-y-[-10px]">
+            <div className="relative z-10 h-full px-6 md:px-10">
+                <div className="h-full flex flex-col justify-end pb-12 md:pb-16">
                     <h2
-                        className="text-[#DA5B00] text-3xl md:text-4xl font-bold mb-5 tracking-tight"
+                        className="text-[#DA5B00] text-3xl md:text-5xl font-bold mb-5 tracking-tight"
                         style={{ fontFamily: "'Times New Roman', Times, serif" }}
                     >
                         Your Next Step
                     </h2>
 
                     <p
-                        className="text-white text-lg md:text-xl font-light max-w-lg leading-relaxed"
+                        className="text-white text-lg md:text-xl font-light max-w-7xl leading-relaxed"
                         style={{ textShadow: "0 3px 12px rgba(0,0,0,0.25)" }}
                     >
                         Transformation begins with clarity.
+                        <br />
                         <br />
                         A Clarity Call helps us explore what is ready to shift and which pathway
                         best supports you now.
                         <br />
                         <br />
-                        No pressure.
-                        <br />
-                        No fixing.
-                        <br />
-                        Just insight and alignment.
                     </p>
+                    <ul className="list-disc pl-5 mt-4 space-y-1 text-white text-lg md:text-xl font-light marker:text-white/50">
+                        <li>No pressure.</li>
+                        <li>No fixing.</li>
+                        <li>Just insight and alignment.</li>
+                    </ul>
+
+
                 </div>
             </div>
 
