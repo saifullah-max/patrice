@@ -1,63 +1,47 @@
 'use client'
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 
-
 export default function AwarenessSection() {
-  const headingRef = useRef<HTMLHeadingElement>(null);
-  const [visible, setVisible] = useState(false);
+    return (
+        <section className="w-full flex justify-center py-0 px-6 md:px-12 bg-gradient-to-b from-[#e67c2b] to-[#DA5B00] relative overflow-hidden min-h-[700px]">
+            <div className="max-w-[1600px] w-full mx-auto flex flex-col items-center pt-12 pb-0">
+                {/* Top: Centered Heading and Subheading */}
+                <div className="w-full flex flex-col items-center mb-8">
+                    <div className="uppercase text-sm tracking-widest text-white font-bold mb-6 font-sans text-center" style={{ fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif" }}>
+                        Awareness isn’t the problem
+                    </div>
+                    <h2 className="text-white text-5xl md:text-6xl font-serif font-bold leading-tight text-center" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
+                        Insight alone doesn’t<br />create lasting change.
+                    </h2>
+                </div>
 
-  useEffect(() => {
-    const node = headingRef.current;
-    if (!node) return;
-    const observer = new window.IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 }
+                {/* Bottom: Text left, Image right */}
+                <div className="w-full flex flex-col md:flex-row items-center justify-center">
+                    {/* Left: Paragraphs */}
+                    <div className="flex-1 flex flex-col justify-center items-start max-w-[700px] md:pl-12">
+                        <div className="space-y-8 text-lg md:text-xl font-sans text-white" style={{ fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif" }}>
+                            <p>Most thoughts, habits, and emotional reactions are driven by <span className="font-extrabold">subconscious patterns</span> stored in the body and nervous system — long before the mind can intervene.</p>
+                            <p>That’s why talk therapy, mindset work, and willpower often reach a limit.</p>
+                            <p>Real change happens <span className="font-extrabold">beneath awareness.</span></p>
+                        </div>
+                    </div>
+
+                    {/* Right: Square Image */}
+                    <div className="flex-1 flex items-center justify-center mt-10 md:mt-0">
+                        <div className="flex items-center justify-center w-[400px] h-[400px]">
+                            <Image
+                                src="/awareness-section.png"
+                                alt="Awareness visual"
+                                width={500}
+                                height={500}
+                                className="object-cover rounded-2xl w-full h-full"
+                                priority
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     );
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <section className="w-full flex justify-center py-24 px-4 bg-[#DA5B00] relative overflow-hidden">
-      {/* Subtle overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#DA5B00] via-[#e67c2b]/80 to-[#b94a00]/90 opacity-80 pointer-events-none z-0" />
-      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
-        {/* Left: Content Card with accent border */}
-        <div className="bg-white/95 rounded-3xl shadow-2xl p-10 md:p-16 flex flex-col justify-center min-h-[380px] border-l-8 border-[#b94a00]">
-          <h2
-            ref={headingRef}
-            className={`text-3xl md:text-5xl font-bold font-serif mb-8 text-[#DA5B00] drop-shadow-sm tracking-tight transition-all duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-            style={{fontFamily: "'Times New Roman', Times, serif"}}
-          >
-            Awareness Isn’t the Problem
-          </h2>
-          <div className="space-y-5 text-base md:text-lg font-sans text-[#3d3246]" style={{fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif"}}>
-            <p className="leading-relaxed">Insight alone doesn’t create lasting change.</p>
-            <p className="leading-relaxed">Most thoughts, habits, and emotional reactions are driven by subconscious patterns stored in the body and nervous system — long before the mind can intervene.</p>
-            <p className="leading-relaxed">That’s why talk therapy, mindset work, and willpower often reach a limit.</p>
-            <p className="font-bold text-[#b94a00] text-lg md:text-xl mt-6">Real change happens beneath awareness.</p>
-          </div>
-        </div>
-        {/* Right: Image Card with hover effect */}
-        <div className="flex items-center justify-center w-full h-full">
-          <div className="bg-white/90 rounded-3xl shadow-2xl p-3 flex items-center justify-center w-full h-full min-h-[340px] md:min-h-[480px] transition-transform duration-300 hover:scale-105">
-            <Image
-              src="/placeholder-selfaware.png"
-              alt="Awareness visual"
-              width={900}
-              height={600}
-              className="object-cover rounded-2xl w-full h-full transition-transform duration-300 hover:scale-105"
-              priority
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
 }

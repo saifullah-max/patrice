@@ -2,38 +2,32 @@ import React from "react";
 import Image from "next/image";
 
 export default function Hero() {
-  return (
-    <section className="relative w-full h-[480px] md:h-[600px] flex items-center justify-center overflow-hidden bg-white">
-      {/* Background Image */}
-      <Image
-        src="/placeholder-hero.png"
-        alt="Hero background"
-        fill
-        className="object-cover object-center opacity-60"
-        priority
-      />
-      {/* Overlay Content */}
-      <div className="relative z-10 flex flex-col items-start justify-center h-full w-full max-w-5xl px-4 md:px-2 text-left">
-        <div className="w-full md:w-1/2">
-          <h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#DA5B00] mb-4 drop-shadow-lg leading-tight"
-            style={{ fontFamily: "'Times New Roman', Times, serif", fontWeight: 700 }}
-          >
-            From Stuck to Freedom
-          </h1>
-          <p className="text-base md:text-2xl font-sans text-[#3d3246] mb-8" style={{fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif"}}>
-            Release Hidden Patterns · Come Home to Yourself
-          </p>
-          <button
-            className="bg-gradient-to-b from-[#ff9a3c] to-[#DA5B00] text-white font-bold font-serif text-lg md:text-xl rounded px-8 py-4 shadow-md transition hover:from-[#ffb36b] hover:to-[#b94a00] hover:shadow-lg"
-            style={{ fontFamily: "'Times New Roman', Times, serif" }}
-          >
-            Schedule A Clarity Call
-          </button>
-        </div>
-      </div>
-      {/* Optional: Overlay for darkening the image */}
-      <div className="absolute inset-0 bg-white/40 pointer-events-none" />
-    </section>
-  );
+    return (
+        <section className="w-full h-[420px] md:h-[410px] 2xl:h-[550px] flex flex-col md:flex-row overflow-hidden">
+            {/* Left: Text Block */}
+            <div className="flex-1 flex flex-col justify-center items-start bg-gradient-to-r from-[#bf3505] to-[#f05813] p-8 md:p-16 min-h-[320px]">
+                <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-2" style={{ fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif" }}>
+                    from stuck<br />
+                    <span className="bg-gradient-to-r from-[#dcb568] to-[#d4a344] text-transparent bg-clip-text pl-24">to freedom</span>
+                </h1>
+                <div className="text-2xl md:text-3xl font-semibold text-white mb-6" style={{ fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif" }}>
+                    Release Hidden Patterns. Come Home to Yourself
+                </div>
+                <button className="bg-gradient-to-r from-[#dcb568] to-[#d4a344] text-[#b94a00] font-bold rounded px-6 py-3 mt-2 text-lg shadow-sm hover:bg-[#ffe7b2] transition">
+                    Schedule A Clarity Call
+                </button>
+            </div>
+            {/* Right: Hero Image */}
+            <div className="flex-1 relative min-h-[320px]">
+                <Image
+                    src="/hero.jpg"
+                    alt="Hero hands visual"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    className="rounded-none"
+                    priority
+                />
+            </div>
+        </section>
+    );
 }

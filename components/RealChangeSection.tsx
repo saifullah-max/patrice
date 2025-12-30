@@ -3,37 +3,45 @@ import Image from "next/image";
 
 export default function RealChangeSection() {
   return (
-    <section className="w-full flex justify-center py-24 px-4 bg-gradient-to-br from-white via-[#fff7f0] to-[#ffe5cc] relative overflow-hidden">
-      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
-        {/* Left: Image Card with hover effect */}
-        <div className="flex items-center justify-center h-full">
-          <div className="bg-white/90 rounded-3xl shadow-2xl p-3 flex items-center justify-center w-full h-full min-h-[340px] md:min-h-[520px] transition-transform duration-300 hover:scale-105">
+    <section className="w-full flex justify-center py-20 px-12 bg-white">
+      <div className="max-w-[1600px] w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+        {/* Left: Centered Image on dark bg */}
+        <div className="flex items-center justify-center w-full h-full min-h-[650px]">
+          <div className="bg-[#28223a] flex items-center justify-center w-full max-w-[600px] h-full min-h-[550px] p-0">
             <Image
-              src="/placeholder-selfaware.png"
-              alt="Real Change Visual"
-              width={600}
-              height={700}
-              className="object-cover rounded-2xl w-full h-full transition-transform duration-300 hover:scale-105"
+              src="/transforming-section.png"
+              alt="Transforming Lives Visual"
+              width={400}
+              height={400}
+              className="object-contain w-full h-full"
               priority
             />
           </div>
         </div>
-        {/* Right: Content Card with accent border */}
-        <div className="bg-white/95 rounded-3xl shadow-2xl p-10 md:p-16 flex flex-col justify-center min-h-[380px] border-l-8 border-[#DA5B00]">
-          <h2 className="text-3xl md:text-5xl font-bold font-serif mb-6 text-[#DA5B00] drop-shadow-sm tracking-tight" style={{fontFamily: "'Times New Roman', Times, serif"}}>
+        {/* Right: Text Block */}
+        <div className="flex flex-col justify-center items-start px-2 md:px-0">
+          <div className="uppercase text-sm tracking-widest text-[#3d3246] font-bold mb-4 font-sans" style={{fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif"}}>
+            Transforming Lives
+          </div>
+          <h2 className="text-5xl md:text-6xl font-serif font-bold mb-6 text-[#d95c1a]" style={{fontFamily: "'Times New Roman', Times, serif"}}>
             Where Real Change Begins
           </h2>
-          <p className="text-base md:text-lg font-sans text-[#3d3246] mb-4 leading-relaxed" style={{fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif"}}>
-            True freedom begins when the body releases what the mind already understands.<br />
-            My work clears hidden emotional and energetic patterns that drive stress, anxiety, self-doubt, and self-sabotage — even when you “know better.”
-          </p>
-          <ul className="list-disc pl-6 text-base md:text-lg font-sans text-[#3d3246] mb-4 space-y-1" style={{fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif"}}>
-            <li>your system settles</li>
-            <li>reactions soften</li>
-            <li>clarity and ease return</li>
-          </ul>
-          <div className="mt-2 text-base md:text-lg font-sans text-[#3d3246]" style={{fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif"}}>
-            <span className="block font-bold text-[#b94a00] mb-1">This isn’t about fixing yourself.</span>
+          <div className="text-lg md:text-xl font-sans text-[#3d3246] mb-4" style={{fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif"}}>
+            True freedom begins when the body releases what the mind already understands.
+          </div>
+          <div className="text-lg md:text-xl font-sans text-[#3d3246] mb-4" style={{fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif"}}>
+            My work clears <span className="font-bold">hidden emotional and energetic patterns</span> that drive stress, anxiety, self-doubt, and self-sabotage — even when you “know better.”
+          </div>
+          <div className="text-lg md:text-xl font-sans text-[#3d3246] mb-4" style={{fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif"}}>
+            As these patterns release:
+            <ul className="list-disc pl-6 mt-2">
+              <li>your system settles</li>
+              <li>reactions soften</li>
+              <li>clarity and ease return</li>
+            </ul>
+          </div>
+          <div className="text-lg md:text-xl font-sans text-[#3d3246] mt-2" style={{fontFamily: "'Helvetica Now', Arial, Helvetica, sans-serif"}}>
+            This isn’t about fixing yourself.<br />
             It’s about freeing yourself from the patterns that have been running your life.
           </div>
         </div>
