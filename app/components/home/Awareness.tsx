@@ -2,76 +2,71 @@ import Image from "next/image";
 
 export default function Awareness() {
     return (
-        <section className="relative overflow-visible pt-10">
+        <section className="relative overflow-hidden pt-12 mx-auto max-w-7xl">
             <div className="flex justify-center">
                 <Image
                     src='/assets/awareness-bg-star.png'
                     width={666}
                     height={700}
                     alt="Background Image"
-                    className="pointer-events-none absolute left-1/2 top-10 -z-10 h-auto w-[420px] -translate-x-1/2 opacity-90 md:w-[540px] 2xl:w-[680px]"
+                    className="pointer-events-none absolute left-1/2 top-10 -z-10 h-auto w-105 -translate-x-1/2 opacity-90 md:w-135 2xl:w-170"
                 />
             </div>
-            <div className="relative z-10 grid grid-cols-1 gap-6 px-6 py-8 md:px-10 lg:grid-cols-2 lg:px-12 xl:px-14">
-                <div>
-                    <h1 className="text-black lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold">
-                        Awareness Isn't the Problem
+            <div className="relative z-10 grid grid-cols-1 items-center gap-2 lg:gap-10 px-6 py-8 md:px-10 lg:grid-cols-5 lg:px-12 xl:px-14">
+
+                {/* LEFT SIDE */}
+                <div className="col-span-3">
+                    <h1 className="text-black text-2xl lg:text-3xl xl:text-[44px] font-bold">
+                        Awareness is not Enough
                     </h1>
-                    <p className="text-black text-base md:text-lg xl:text-xl 2xl:flex flex-col pt-3 lg:pt-4 xl:pt-6 flex flex-col font-semibold">
-                        <span>Insight helps.</span>
-                        <span>But it does not always change what the body holds</span>
-                    </p>
-                    <p className="text-xs md:text-sm lg:text-base pt-3 lg:pt-4 xl:pt-6 flex flex-col">
-                        <span>Patterns live beneath thought.</span>
-                        <span>In nervous system.</span>
-                        <span>In the places words alone can’t reach</span>
-                        <span className="pt-4">That is where the real change begins.</span>
-                    </p>
 
-                    <button className="gradient-outline-btn my-6">
-                        <span className="text-[#DA5B00]">Learn More</span>
-                    </button>
-                </div>
-                <div className="relative mx-auto mt-4 w-[260px] sm:w-[320px] md:w-[380px] lg:mt-0 lg:mx-0 lg:w-[430px] xl:w-[470px] 2xl:w-[510px]">
-                    <div
-                        className="relative h-[260px] w-[260px] overflow-hidden rounded-t-[160px] rounded-b-none p-[1px] sm:h-[320px] sm:w-[320px] sm:rounded-t-[200px] md:h-[380px] md:w-[380px] md:rounded-t-[230px] lg:h-[430px] lg:w-[430px] lg:rounded-t-[250px] xl:h-[470px] xl:w-[470px] xl:rounded-t-[270px] 2xl:h-[510px] 2xl:w-[510px] 2xl:rounded-t-[290px]"
-                        style={{ background: "linear-gradient(to right, var(--dark-gold), var(--light-gold))" }}
-                    >
-                        <div className="relative h-full w-full overflow-hidden rounded-t-[inherit] rounded-b-none bg-white p-[4px]">
-                            <div
-                                className="relative h-full w-full overflow-hidden rounded-t-[inherit] rounded-b-none border p-[4px]"
-                                style={{ borderColor: "var(--light-gold)" }}
-                            >
-                                <Image
-                                    src="/assets/awareness-image.png"
-                                    alt="Awareness"
-                                    fill
-                                    className="object-cover object-center"
-                                />
-                            </div>
-                        </div>
+                    <div className="flex flex-col gap-6 pt-3 lg:pt-4 xl:pt-6">
+
+                        <p className="text-black text-base md:text-lg xl:text-xl font-medium">
+                            <span className="text-2xl lg:text-3xl xl:text-4xl tracking-tight">
+                                Insight alone doesn't create lasting change.
+                            </span>
+                        </p>
+
+                        <p className="text-black text-2xl lg:text-3xl xl:text-4xl font-medium leading-tight tracking-tight">
+                            About <span className="text-(--dark-orange) font-satisfy">95%</span> of our thoughts habits, and emotional reactions are driven by
+                            <span className="text-(--dark-orange) font-satisfy"> subconscious patterns</span> stored in the body and nervous system — long before the mind can intervene.
+                        </p>
+
+                        <p className="text-black text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-medium leading-tight tracking-tight">
+                            That's why talk therapy, mindset work, and willpower often reach a limit.
+                        </p>
+
+                        <p className="text-black text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-medium tracking-tight">
+                            Real change happens <span className="text-(--dark-orange) font-satisfy">beneath awareness.</span>
+                        </p>
                     </div>
+                </div>
 
-                    <div
-                        className="absolute -right-24 bottom-8 h-[140px] w-[125px] overflow-hidden rounded-t-[100px] rounded-b-none p-[1px] sm:h-[120px] sm:w-[110px] md:h-[120px] md:w-[130px] lg:h-[150px] lg:w-[150px] xl:h-[180px] xl:w-[175px] 2xl:h-[260px] 2xl:w-[200px]"
-                        style={{ background: "linear-gradient(to right, var(--dark-gold), var(--light-gold))" }}
-                    >
-                        <div className="h-full w-full rounded-t-[inherit] rounded-b-none bg-white p-[4px]">
-                            <div
-                                className="flex h-full w-full items-center justify-center rounded-t-[inherit] rounded-b-none border"
-                                style={{ borderColor: "var(--light-gold)" }}
-                            >
-                                <Image
-                                    src="/assets/insights.svg"
-                                    alt="Insights icon"
-                                    width={110}
-                                    height={110}
-                                    className="h-auto w-[68px] sm:w-[80px] md:w-[90px] lg:w-[100px]"
-                                />
+                {/* RIGHT SIDE (UNCHANGED IMAGE DIMENSIONS) */}
+                <div className="flex justify-center lg:justify-end col-span-2">
+                    <div className="mx-auto mt-4 w-65 sm:w-[320px] md:w-[380px] lg:mt-0 lg:mx-0 lg:w-[430px] xl:w-[470px] 2xl:w-[510px]">
+                        <div
+                            className="h-[400px] w-[260px] overflow-hidden rounded-t-[160px] rounded-b-none p-[1px] sm:h-[420px] sm:w-[280px] sm:rounded-t-[200px] md:h-[460px] md:w-[300px] md:rounded-t-[230px] lg:h-[500px] lg:w-[340px] lg:rounded-t-[250px] xl:h-[540px] xl:w-[380px] xl:rounded-t-[270px] 2xl:h-[570px] 2xl:w-[430px] 2xl:rounded-t-[290px]"
+                            style={{ background: "linear-gradient(to right, var(--dark-gold), var(--light-gold))" }}
+                        >
+                            <div className="relative h-full w-full overflow-hidden rounded-t-[inherit] rounded-b-none bg-white p-[4px]">
+                                <div
+                                    className="relative h-full w-full overflow-hidden rounded-t-[inherit] rounded-b-none border p-[4px]"
+                                    style={{ borderColor: "var(--light-gold)" }}
+                                >
+                                    <Image
+                                        src="/assets/awareness-image.jpg"
+                                        alt="Awareness"
+                                        fill
+                                        className="object-cover object-center"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
             <Image
                 src="/assets/awareness-side-style.png"

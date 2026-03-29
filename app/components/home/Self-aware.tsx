@@ -1,56 +1,26 @@
 export default function SelfAware() {
     return (
-        <section className="pt-18 flex justify-center">
-            <div className="relative max-w-4xl w-full">
-
-                {/* TOP RIGHT SVG */}
-                <svg
-                    className="absolute top-12 -right-24"
-                    width="21"
-                    height="21"
-                    viewBox="0 0 21 21"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path opacity="0.5" d="M3.55163 4.41074e-05L11.0325 5.59115L20.1464 3.55168L14.5553 11.0325L16.5948 20.1464L9.11393 14.5553L1.66893e-06 16.5948L5.59111 9.11397L3.55163 4.41074e-05Z" fill="url(#paint0_linear_158_1454)" />
-                    <defs>
-                        <linearGradient id="paint0_linear_158_1454" x1="1.66893e-06" y1="16.5948" x2="20.1464" y2="3.55168">
-                            <stop offset="0.129808" stopColor="#C78F1F" />
-                            <stop offset="0.432692" stopColor="#F7E399" />
-                            <stop offset="0.586538" stopColor="#F7E399" />
-                            <stop offset="1" stopColor="#C78F1F" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-
+        <section className="pt-12 flex justify-center overflow-x-hidden max-w-7xl mx-auto">
+            <div className="relative max-w-6xl w-full">
                 {/* CARD */}
-                <div className="bg-[#FCEFE6] px-10 py-8 rounded-[50px] my-4">
-                    <p className="text-base md:text-lg xl:text-xl 2xl:text-2xl text-black text-center">
-                        You Are self-aware. Your have done the work
-                    </p>
+                <div className="bg-[#E27B34] px-6 py-6 lg:py-12 xl:py-14 rounded-2xl xl:rounded-4xl my-4 mx-4" style={{
+                    boxShadow: "3px 3px 0px #F8D4B9"
+                }}>
 
-                    <h3 className="py-3 bg-linear-to-r from-(--light-orange) to-(--dark-orange) bg-clip-text text-transparent lg:text-2xl xl:text-3xl 2xl:text-4xl font-extrabold text-center">
-                        Therapy. Coaching. Retreats. Books. Practice
-                    </h3>
-
-                    <p className="text-base md:text-lg xl:text-xl 2xl:text-2xl text-black text-center">
-                        And still - something feels stuck
-                    </p>
-
-                    <div className="py-4">
-                        <p className="text-base md:text-lg xl:text-xl 2xl:text-2xl text-black text-center font-medium">
-                            Talk therapy and mindset work build awareness
+                    <div>
+                        <p className=" text-2xl md:text-3xl xl:text-[44px] text-white text-center font-semibold pb-2 lg:pb-4 xl:pb-6">
+                            Talk therapy and mindset work build awareness.
                         </p>
-                        <p className="text-base md:text-lg xl:text-xl 2xl:text-2xl text-black text-center font-bold">
-                            Some patterns live deeper
+                        <p className="text-3xl md:text-4xl xl:text-5xl text-(--light-gold) text-center font-normal font-satisfy pb-6">
+                            Some patterns live deeper.
                         </p>
                     </div>
 
-                    <div className="pt-4">
-                        <p className="text-base md:text-lg xl:text-xl 2xl:text-2xl text-black text-center font-medium">
+                    <div>
+                        <p className="text-2xl md:text-3xl xl:text-[44px] text-white text-center font-semibold pb-2 lg:pb-4 xl:pb-6">
                             If this feels familiar,
                         </p>
-                        <p className="text-base md:text-lg xl:text-xl 2xl:text-2xl text-black text-center font-bold">
+                        <p className="text-3xl md:text-4xl xl:text-5xl text-(--light-gold) text-center font-normal font-satisfy">
                             nothing is wrong with you.
                         </p>
                     </div>

@@ -2,83 +2,87 @@ import Image from "next/image";
 
 export default function NextStep() {
     return (
-        <section className="w-full py-12 px-4 md:px-0 relative bg-white overflow-visible">
-            <div className="flex justify-center flex-col text-center mb-12">
-                <h1 className="text-black lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold">
+        <section className="max-w-7xl mx-auto relative w-full overflow-visible bg-white px-6 pt-12 md:px-10 lg:px-12 xl:px-14">
+            {/* Heading */}
+            <div className="text-center mb-12">
+            <h1 className="text-black text-2xl lg:text-3xl xl:text-[44px] font-bold text-center mb-6">
                     Your Next Step
                 </h1>
-                <p className="pt-4  text-black text-base md:text-lg xl:text-xl 2xl:text-2xl font-semibold">
-                    Transformation begins with clarity.
-                </p>
             </div>
 
-            <div className="flex justify-center relative z-10">
-                <div className="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-start relative z-10">
+            {/* Orange container */}
+            <div className="relative flex w-full max-w-4xl overflow-visible bg-(--light-orange) px-8 py-6 lg:py-10 xl:py-12 2xl:py-14 md:px-12 lg:px-14">
 
-                    {/* Right: Text and button */}
-                    <div className="relative flex flex-col justify-start items-start">
-                        <p className="text-black text-base xl:text-lg 2xl:text-xl mb-2">
-                            A Clarity Call helps us explore what is ready to shift and which pathway best supports you now.
-                        </p>
+                <div className="grid w-full grid-cols-1 items-center lg:grid-cols-[420px_1fr] xl:grid-cols-9 gap-12">
 
-                        <ul className="text-[#707070] text-base xl:text-lg 2xl:text-xl mb-8 pl-8 list-disc space-y-1">
-                            <li>No pressure.</li>
-                            <li>No fixing.</li>
-                            <li>Just insight and alignment.</li>
+                    {/* LEFT CONTENT */}
+                    <div className="text-white col-span-4">
+                        <h2 className="text-xl lg:text-2xl xl:text-[32px] font-bold leading-snug mb-6">
+                            A clarity call is a simple conversation.
+                        </h2>
+
+                        <ul className="space-y-2 text-lg lg:text-xl xl:text-2xl mb-4">
+                            <li>• No pressure.</li>
+                            <li>• No fixing.</li>
+                            <li>• Just insight and alignment.</li>
                         </ul>
 
-                        <button
-                            className="rounded-4xl px-7 py-3 text-white font-medium text-base xl:text-lg 2xl:text-xl shadow-md relative z-10"
-                            style={{
-                                background: "linear-gradient(to right, var(--light-orange), var(--dark-orange))",
-                            }}
-                        >
-                            Schedule a clarity call
-                        </button>
+                        <div className="relative inline-block mt-6 lg:mt-8 xl:mt-10">
+                            {/* Offset border shape */}
+                            <div className="absolute z-50 top-[10px] -left-[6px] w-full h-full rounded-r-full border-2 border-black"></div>
 
-                    </div>
-
-                    {/* Left: Arched photo */}
-                    <div className="flex justify-start relative">
-                        <div
-                            className="relative p-0.5 w-82.5 h-75 md:w-92.5 md:h-86.25 lg:w-100 lg:h-96.25 xl:w-113 xl:h-106.25 rounded-t-[320px]"
-                            style={{
-                                background: "linear-gradient(to right, var(--light-gold), var(--dark-gold))",
-                            }}
-                        >
-                            <div className="relative h-full w-full bg-white rounded-t-[315px]">
-                                <div className="relative h-full w-full overflow-hidden rounded-t-[310px]">
-                                    <Image
-                                        src="/assets/next-step-large.png"
-                                        alt="Clarity call"
-                                        fill
-                                        className="object-cover"
-                                        priority
-                                    />
-                                </div>
-                            </div>
-
-                            <div
-                                className="absolute -right-27.5 top-17.5 p-0.5 w-45 h-40 md:w-55 md:h-50 lg:w-62 lg:h-60 xl:w-[280px] xl:h-[270px] rounded-t-[210px]"
+                            {/* Button */}
+                            <button
+                                className="relative py-4 px-10 rounded-r-full text-black font-medium text-sm lg:text-base xl:text-lg"
                                 style={{
-                                    background: "linear-gradient(to right, var(--light-gold), var(--dark-gold))",
+                                    background: 'white'
                                 }}
                             >
-                                <div className="relative h-full w-full bg-white rounded-t-[208px]">
-                                    <div className="relative h-full w-full overflow-hidden rounded-t-[200px]">
-                                        <Image
-                                            src="/assets/next-step-small.png"
-                                            alt="Energy healing"
-                                            fill
-                                            className="object-cover"
-                                        />
-                                    </div>
-                                </div>
+                                Schedule A Clarity Call
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* RIGHT IMAGE */}
+                    <div className="relative hidden lg:block col-span-5">
+                        <div className="relative">
+
+                            <div className="relative h-82.5 w-155 rounded-tr-[300px] overflow-hidden lg:h-82 lg:w-155 xl:h-92 xl:w-180 2xl:h-104 2xl:w-192">
+                                <Image
+                                    src="/assets/next-step-image.jpg"
+                                    alt="Clarity call"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section >
-    )
+        </section>
+    );
 }
+
+{/* Gradient border */ }
+// <div
+//     className="rounded-tr-[300px] p-0.5"
+//     style={{
+//         background: "linear-gradient(to right, var(--light-gold), var(--dark-gold))",
+//     }}
+// >
+//     {/* White layer */}
+//     <div className="rounded-tr-[300px] bg-white p-1.5">
+
+//         {/* Image */}
+//         <div className="relative h-82.5 w-155 rounded-tr-[300px] overflow-hidden lg:h-87.5 lg:w-165 xl:h-97.5 xl:w-185 2xl:h-107.5 2xl:w-197.5">
+//             <Image
+//                 src="/assets/next-step-large.png"
+//                 alt="Clarity call"
+//                 fill
+//                 className="object-cover"
+//                 priority
+//             />
+//         </div>
+//     </div>
+// </div>

@@ -11,10 +11,10 @@ const services = [
             </svg>
 
         ),
+        image: '/assets/reset-codes.png',
         title: "Reset Codes",
-        subtitle: "What I inherited",
         description:
-            "This support release of ancestral and generational imprints stored in the body and subconscious.",
+            "Clear subconscious patterns shaping self-trust, performance, and decisions.",
     },
     {
         icon: (
@@ -28,10 +28,11 @@ const services = [
                 </defs>
             </svg>
         ),
+        image: '/assets/heart-codes.jpg',
         title: "Heart Codes",
         subtitle: "How I embody coherence",
         description:
-            "Stabilize your system through heart-brain coherence so calm, clarity and resilience become your baseline.",
+            "Release ancestral and generational imprints held in the body.",
     },
     {
         icon: (
@@ -42,66 +43,54 @@ const services = [
                 <path d="M3.02426 12.0969H28.7304" stroke="black" strokeWidth="2.01617" strokeLinecap="round" />
             </svg>
         ),
+        image: '/assets/freedom-codes.jpg',
         title: "Freedom Codes",
         subtitle: "What's mine",
         description:
-            "Clearing of sub conscious shaping performances, self trust and daily decision making.",
+            "Create calm and clarity through heart-brain coherence.",
     },
 ];
 
 
 export default function Services() {
     return (
-        <section className="px-6 py-12 md:px-10 lg:px-12 xl:px-14">
+        <section className="px-6 pt-12 md:px-10 lg:px-12 xl:px-14 max-w-7xl mx-auto">
             <div className="flex justify-center flex-col text-center">
-                <h1 className="text-black lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold">
-                    Our Services
-                </h1>
-                <p className="pt-4  text-black text-base md:text-lg xl:text-xl 2xl:text-2xl font-semibold">
+                <h1 className="text-black text-2xl lg:text-3xl xl:text-[44px] font-bold text-center">
                     Signature offering
-                </p>
+                </h1>
             </div>
-            <div className="mx-auto max-w-7xl grid grid-cols-1 gap-8 md:grid-cols-3 mt-12 relative">
+            <div className="mx-auto mt-12 grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-3 relative">
 
-                {/* Background image */}
-                <Image
-                    src="/assets/services-bg-image.png"
-                    alt="background-style"
-                    width={250}
-                    height={250}
-                    className="absolute -left-20 -bottom-30 z-0 pointer-events-none"
-                />
-
-                {services.map((service, idx) => (
+                {services.map((service) => (
                     <div
                         key={service.title}
-                        className="relative z-10 overflow-visible rounded-t-[180px] p-[1px]"
-                        style={{
-                            background: "linear-gradient(to right, var(--dark-gold), var(--light-gold))",
-                        }}
+                        className="relative z-10 flex flex-col items-center"
                     >
-                        <div className="relative h-full w-full rounded-t-[178px] bg-white p-[6px]">
-                            <div className="relative flex h-full flex-col items-center rounded-t-[172px] bg-[#FCEFE6] px-6 py-10 pb-6 overflow-hidden">
-                                <Image src='assets/service-leaf.svg' width={180} height={170} alt="image" className="top-0 -right-8 absolute" />
-                                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-sm">
-                                    {service.icon}
+                        <div className="mx-auto w-65 sm:w-80 md:w-95 lg:w-75 xl:w-82.5 2xl:w-90">
+                            <div
+                                className="h-100 w-65 overflow-hidden rounded-t-[160px] rounded-b-none p-px sm:h-105 sm:w-70 sm:rounded-t-[200px] md:h-115 md:w-75 md:rounded-t-[230px] lg:h-125 lg:w-75 lg:rounded-t-[240px] xl:h-135 xl:w-82.5 xl:rounded-t-[260px] 2xl:h-142.5 2xl:w-90 2xl:rounded-t-[280px]"
+                                style={{ background: "linear-gradient(to right, var(--dark-gold), var(--light-gold))" }}
+                            >
+                                <div className="relative h-full w-full overflow-hidden rounded-t-[inherit] rounded-b-none bg-white p-1">
+                                    <div
+                                        className="relative h-full w-full overflow-hidden rounded-t-[inherit] rounded-b-none border p-1"
+                                        style={{ borderColor: "var(--light-gold)" }}
+                                    >
+                                        <Image
+                                            src={service.image}
+                                            alt={service.title}
+                                            fill
+                                            className="object-cover object-center"
+                                        />
+                                    </div>
                                 </div>
-                                <h2 className="text-center text-base lg:text-lg xl:text-xl 2xl:text-2xl font-semibold text-black">{service.title}</h2>
-                                <div className="mt-6 text-center text-xs lg:text-sm xl:text-base text-black/50 font-medium">{service.subtitle}</div>
-                                <p className="mt-2 text-center text-xs leading-relaxed text-black/70">{service.description}</p>
-                                <button
-                                    className="mt-6 rounded-lg bg-[#DA5B00] px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-[#E27B34]"
-                                >
-                                    Book session
-                                </button>
-                                <Image
-                                    src="/assets/tree-tips.png"
-                                    alt="decorative bg"
-                                    width={120}
-                                    height={120}
-                                    className="pointer-events-none absolute right-0 top-0 opacity-[0.08]"
-                                />
                             </div>
+                        </div>
+
+                        <div className="mt-6 max-w-90 text-center">
+                            <h2 className="text-xl font-semibold text-black lg:text-2xl xl:text-3xl">{service.title}</h2>
+                            <p className="mt-2 text-xl leading-snug text-black/80 lg:text-2xl xl:text-[26px]">{service.description}</p>
                         </div>
                     </div>
                 ))}

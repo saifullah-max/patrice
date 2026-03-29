@@ -3,79 +3,70 @@ import Image from "next/image";
 
 const personas = [
     {
-        icon: "/assets/serve-sprinkle.png",
-        title: "Capable but tired",
+        icon: "/assets/who-i-serve-1.png",
+        title: "Functional, yet strained",
     },
     {
-        icon: "/assets/serve-react.png",
-        title: "Self aware but still looping",
+        icon: "/assets/who-i-serve-2.png",
+        title: "Capable, yet depleted",
     },
     {
-        icon: "/assets/serve-leaf.png",
-        title: "Functional, but carrying weight you can't name.",
+        icon: "/assets/who-i-serve-3.png",
+        title: "Holding, yet fracturing",
     },
 ];
 
 export default function WhoIServe() {
     return (
-        <section className="px-6 py-8 md:px-10 lg:px-12 xl:px-14 flex justify-center relative overflow-hidden">
-            {/* Circular background */}
-            <Image
-                src="/assets/serve-circulars.png"
-                width={350}
-                height={350}
-                alt="styled circular lines"
-                className="pointer-events-none absolute top-10 -right-10 opacity-80 z-0"
-            />
-
-            <div className="flex justify-center flex-col text-center relative z-10">
-                <h1 className="text-black lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold">
+        <section className="px-6 pt-12 md:px-10 lg:px-12 xl:px-14 flex justify-center relative overflow-hidden max-w-7xl mx-auto">
+            <div className="text-center relative z-10">
+                <h1 className="text-black text-2xl lg:text-3xl xl:text-[44px] font-bold text-center">
                     Who I Serve
                 </h1>
-                <p className="pt-4 text-black text-base md:text-lg xl:text-xl 2xl:text-2xl font-medium flex flex-col">
+                <p className="pt-4 text-black text-xl md:text-2xl xl:text-3xl flex flex-col">
                     <span>I guide conscious entrepreneurs, professionals and growth seekers.</span>
-                    <span className="pt-4 font-semibold">I work with people who are:</span>
+                    <span className="pt-4 font-satisfy">I work with people who are:</span>
                 </p>
 
-                <div className="mt-12 px-10">
-                    <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-[1fr_auto_1fr_auto_1fr] md:gap-6 xl:gap-0">
+                <div className="mt-12">
+                    <div className="grid grid-cols-1 items-start gap-2 md:grid-cols-3 md:gap-6 xl:gap-22">
                         {personas.map((persona, idx) => (
                             <React.Fragment key={persona.title}>
                                 <div className="flex flex-col items-center text-center">
-                                    <div className="mb-6 flex h-28 w-28 items-center justify-center md:h-32 md:w-32">
+                                    <div className="flex items-center justify-center
+                w-32 h-32
+                sm:w-28 sm:h-28
+                md:w-32 md:h-32
+                lg:w-40 lg:h-40
+                xl:w-[261px] xl:h-[261px]
+                2xl:w-[261px] 2xl:h-[261px]">
                                         <Image
                                             src={persona.icon}
                                             alt={persona.title}
-                                            width={128}
-                                            height={128}
-                                            className="h-auto w-full"
+                                            width={261}
+                                            height={261}
+                                            className="w-full h-full object-contain"
                                         />
                                     </div>
-                                    <h3
-                                        className={`text-lg font-medium text-black md:text-xl whitespace-pre-line ${idx < 2 ? "whitespace-nowrap" : ""}`}
-                                    >
-                                        {persona.title}
+                                    <h3 className="text-xl font-medium text-black lg:text-2xl xl:text-3xl mb-6">
+                                        {(() => {
+                                            const [first, second] = persona.title.split(",");
+                                            return (
+                                                <>
+                                                    <span>{first}, {" "}</span>
+                                                    <span className="font-satisfy">{second.trim()}</span>
+                                                </>
+                                            );
+                                        })()}
                                     </h3>
                                 </div>
-                                {idx < personas.length - 1 && (
-                                    <div className="hidden pt-12 md:block">
-                                        <Image
-                                            src="/assets/arrow.svg"
-                                            alt="arrow"
-                                            width={120}
-                                            height={60}
-                                            className="h-auto w-20 xl:w-25"
-                                        />
-                                    </div>
-                                )}
                             </React.Fragment>
                         ))}
                     </div>
                 </div>
 
-                <p className="mt-12 text-center text-base text-black/50 md:text-lg xl:text-xl flex flex-col">
-                    <span>Your don't need more insight.</span>
-                    <span className="text-black font-semibold">Your need release.</span>
+                <p className="text-center text-2xl text-(--dark-orange) font-satisfy lg:text-3xl xl:text-4xl">
+                    You don't need more insight, you need release.
                 </p>
             </div>
         </section>

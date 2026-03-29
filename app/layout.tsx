@@ -1,28 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins, Lato } from "next/font/google";
+import { Alice, Spectral, Satisfy } from "next/font/google";
+import type { CSSProperties } from "react";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const alice = Alice({
+  variable: "--font-alice",
   subsets: ["latin"],
+  weight: ["400"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spectral = Spectral({
+  variable: "--font-spectral",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const satisfy = Satisfy({
+  variable: "--font-satisfy",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-const lato = Lato({
-  variable: "--font-lato",
-  subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -35,11 +32,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const fontFamilies = {
+    "--font-alice-family": alice.style.fontFamily,
+    "--font-spectral-family": spectral.style.fontFamily,
+    "--font-satisfy-family": satisfy.style.fontFamily,
+  } as CSSProperties;
+
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${lato.variable} antialiased`}
-      >
+    <html
+      lang="en"
+      className={`${alice.variable} ${spectral.variable} ${satisfy.variable}`}
+      style={fontFamilies}
+    >
+      <body className={`${spectral.className} antialiased`}>
         <Navbar />
         {children}
       </body>

@@ -2,32 +2,27 @@ import Image from "next/image";
 
 export default function AboutTherapist() {
     return (
-        <section className="w-full py-12 px-4 md:px-0 relative bg-white overflow-visible">
-            {/* Background tree */}
-            <Image
-                src="/assets/about-tree.png"
-                alt="decorative leaf"
-                width={400}
-                height={400}
-                className="pointer-events-none absolute top-72 right-44 -translate-y-1/4 opacity-90 z-0 hidden md:block"
-            />
-
-            <h1 className="text-black lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-center mb-6 relative z-10">
+        <section className="max-w-7xl mx-auto w-full pt-12 px-6 md:px-10 lg:grid-cols-5 lg:px-12 xl:px-14 relative bg-white overflow-visible">
+            <h1 className="text-black text-2xl lg:text-3xl xl:text-[44px] font-bold text-center mb-6">
                 About Your Therapist
             </h1>
 
-            <div className="flex justify-center relative z-10">
-                <div className="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
-                    {/* Left: Arched photo */}
-                    <div className="flex justify-start relative">
+            <div className="relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-7 items-center gap-12 lg:gap-16 xl:gap-24">
+                    <div className="relative col-span-3">
                         <div
-                            className="relative p-[2px] w-[320px] h-[400px] md:w-[350px] md:h-[440px] lg:w-[370px] lg:h-[480px] xl:w-[518px] xl:h-[690px] rounded-t-[320px]"
-                            style={{
-                                background: "linear-gradient(to right, var(--light-gold), var(--dark-gold))",
-                            }}
+                            className="w-[320px] h-100 md:w-87.5:md:h-110:wlg:w-92.5h-[480px] xl:w-117.5l:h-[650px] 
+        rounded-t-[320px] overflow-hidden p-px"
+                            style={{ background: "linear-gradient(to right, var(--dark-gold), var(--light-gold))" }}
                         >
-                            <div className="relative h-full w-full bg-white p-[6px] rounded-t-[315px]">
-                                <div className="relative h-full w-full overflow-hidden rounded-t-[310px]">
+                            {/* White layer */}
+                            <div className="relative h-full w-full bg-white p-1 rounded-t-[inherit]">
+
+                                {/* Inner border layer */}
+                                <div
+                                    className="relative h-full w-full overflow-hidden rounded-t-[inherit] border p-1"
+                                    style={{ borderColor: "var(--light-gold)" }}
+                                >
                                     <Image
                                         src="/assets/Dr-patrice.jpg"
                                         alt="Dr. Patrice Khan"
@@ -41,36 +36,43 @@ export default function AboutTherapist() {
                     </div>
 
                     {/* Right: Text and button */}
-                    <div className="relative flex flex-col justify-center items-start">
-                        <h2 className="text-black text-base lg:text-lg md:text-xl xl:text-2xl font-bold mb-2 font-semibold">
-                            Working with Dr. Patrice Khan
+                    <div className="relative flex flex-col justify-center items-start col-span-4">
+                        <h2 className="text-black text-2xl lg:text-3xl xl:text-4xl mb-8">
+                            Working with <span className="text-(--dark-orange)">Dr. Patrice Khan</span>
                         </h2>
-                        <p className="text-black text-base xl:text-lg 2xl:text-xl mb-2">
-                            I’m an intuitive Energy Therapist.<br />
-                            <span className="italic text-black">An Ambassador to the invisible.</span>
-                        </p>
-                        <p className="text-black text-base xl:text-lg 2xl:text-xl mb-2">
-                            I help reveal what has been hidden so it can finally let go.
-                        </p>
-                        <p className="text-black text-base xl:text-lg 2xl:text-xlmb-2">
-                            This is intuitive, embodied work.<br />Quiet. Precise. Grounded.
-                        </p>
-                        <p className="text-black text-base xl:text-lg 2xl:text-xl mb-6">
-                            Awareness becomes lived change.
-                        </p>
+                        <div className="grid grid-rows-3 gap-6 lg:gap-8 xl:gap-10">
+                            <p className="text-black text-xl lg:text-2xl xl:text-3xl mb-2">
+                                I’m an intuitive <span className="font-semibold">Energy Therapist.</span><br />
+                                <span className="italic text-black">An Ambassador to the invisible.</span>
+                            </p>
+                            <p className="text-black text-xl lg:text-2xl xl:text-3xl mb-2">
+                                I help reveal what has been hidden
+                                <span>so it can finally let go.</span>
+                            </p>
+                            <p className="text-black text-xl lg:text-2xl xl:text-3xl mb-2">
+                                This is intuitive, embodied work.
+                                <span>Quiet. Precise. Grounded.</span>
+                            </p>
+                        </div>
 
-                        <button
-                            className="rounded-4xl px-7 py-3 text-white font-medium text-base xl:text-lg 2xl:text-xl shadow-md relative z-10"
-                            style={{
-                                background: "linear-gradient(to right, var(--light-orange), var(--dark-orange))",
-                            }}
-                        >
-                            Book Your Therapist
-                        </button>
+                        <div className="relative inline-block mt-6 lg:mt-8 xl:mt-10">
+                            {/* Offset border shape */}
+                            <div className="absolute z-50 top-1.5eft-[6px] w-full h-full rounded-l-full border-2 border-black"></div>
+
+                            {/* Button */}
+                            <button
+                                className="relative py-4 px-10 rounded-l-full text-white font-medium text-base lg:text-lg"
+                                style={{
+                                    background: 'linear-gradient(to right, var(--light-orange), var(--dark-orange))'
+                                }}
+                            >
+                                Book Your Therapist
+                            </button>
+                        </div>
 
                         {/* Small 42px SVG below the button */}
                         <svg
-                            className="mt-12 w-[42px] h-[42px] pointer-events-none absolute -bottom-30"
+                            className="mt-12 w-10.5-h-10.5ointer-events-none absolute -bottom-30 right-55"
                             viewBox="0 0 21 21"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +88,7 @@ export default function AboutTherapist() {
             </div>
             {/* Top-right extreme SVG */}
             <svg
-                className="absolute top-30 right-10 w-36 h-36 pointer-events-none"
+                className="absolute top-30 right-10 w-28 h-28 pointer-events-none"
                 viewBox="0 0 21 21"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

@@ -2,23 +2,23 @@ import Image from "next/image";
 
 export default function PatriceCommunity() {
     return (
-        <section className="w-full py-16 px-4 md:px-0 relative bg-white overflow-hidden">
+        <section className="max-w-7xl mx-auto w-full pt-12 px-4 md:px-0 relative bg-white overflow-hidden">
             <div className="flex justify-center flex-col text-center mb-6">
-                <h1 className="text-black lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold">
+                <h1 className="text-black text-2xl lg:text-3xl xl:text-[44px] font-bold text-center mb-4">
                     Join Dr. Patrice Khan Community
                 </h1>
 
-                <p className="pt-4 text-base md:text-lg xl:text-xl 2xl:text-2xl max-w-2xl mx-auto">
+                <p className="pt-4 text-xl lg:text-2xl xl:text-3xl max-w-2xl mx-auto text-black">
                     Connect with Dr. Khan to explore whether this work is right for you and take the first step toward greater calm, clarity, and coherence.
                 </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 px-16">
-                <div className="bg-[#FCEFE6] px-8 py-6 flex items-center justify-between rounded-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 px-2 sm:px-4 lg:px-16">
+                <div className="bg-[#FCEFE6] px-4 lg:px-8 py-5 lg:py-6 flex items-center justify-between flex-nowrap rounded-2xl">
                     <svg
                         width="80"
                         height="80"
-                        className="w-[60px] md:w-[80px] xl:w-[90px] 2xl:w-[100px]"
+                        className="w-12 md:w-20 xl:w-22.5 2xl:w-25 shrink-0"
                         viewBox="0 0 100 100"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ export default function PatriceCommunity() {
                             </defs>
                         </svg>
                     </svg>
-                    <h1 className="text-black font-bold text-xl md:text-2xl xl:text-3xl 2xl:text-4xl">
+                    <h1 className="text-black font-bold text-base sm:text-lg md:text-2xl xl:text-3xl 2xl:text-[44px] whitespace-nowrap px-2">
                         @ Patrice Khan
                     </h1>
 
@@ -51,24 +51,24 @@ export default function PatriceCommunity() {
                         alt="QR Code"
                         width={105}
                         height={110}
-                        className="w-[70px] md:w-[90px] xl:w-[105px]"
+                        className="w-14 md:w-22.5 xl:w-26.25 shrink-0"
                     />
                 </div>
-                <div className="bg-[#FCEFE6] px-8 py-6 flex items-center justify-between rounded-2xl">
-                    <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_158_1617)">
+                <div className="bg-[#FCEFE6] px-4 lg:px-8 py-5 lg:py-6 flex items-center justify-between flex-nowrap rounded-2xl">
+                    <svg width="100" height="101" className="w-12 md:w-20 lg:w-25 shrink-0" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clipPath="url(#clip0_158_1617)">
                             <path d="M2.14614 49.8954C2.14379 58.3814 4.35573 66.6673 8.5617 73.9706L1.7439 98.9239L27.2187 92.2281C34.2647 96.0731 42.1592 98.0879 50.1816 98.0885H50.2027C76.6862 98.0885 98.2444 76.4858 98.2557 49.9334C98.2608 37.0668 93.2668 24.968 84.1933 15.8655C75.1214 6.76371 63.0561 1.74855 50.2007 1.74268C23.7141 1.74268 2.15746 23.3441 2.14653 49.8954" fill="url(#paint0_linear_158_1617)" />
                             <path d="M0.430558 49.8799C0.427824 58.6712 2.71904 67.2535 7.07496 74.8183L0.0126953 100.666L26.4009 93.7303C33.6717 97.7042 41.8579 99.7993 50.1878 99.8025H50.2093C77.643 99.8025 99.9756 77.4228 99.9873 49.9198C99.992 36.591 94.8183 24.0572 85.4207 14.6286C76.0219 5.20111 63.5251 0.00548062 50.2093 0C22.771 0 0.441493 22.3766 0.430558 49.8799ZM16.1457 73.5155L15.1604 71.9476C11.0185 65.3458 8.83233 57.7168 8.83545 49.883C8.84405 27.023 27.4034 8.4245 50.2249 8.4245C61.2768 8.42919 71.6633 12.7479 79.4753 20.5836C87.287 28.4201 91.5855 38.8372 91.5828 49.9167C91.5727 72.7768 73.0129 91.3776 50.2093 91.3776H50.1929C42.7679 91.3737 35.4857 89.3748 29.135 85.5975L27.6237 84.6991L11.9643 88.8146L16.1457 73.5155Z" fill="url(#paint1_linear_158_1617)" />
                             <path d="M37.768 29.027C36.8362 26.9511 35.8556 26.9092 34.9695 26.8728C34.2439 26.8414 33.4144 26.8438 32.5857 26.8438C31.7562 26.8438 30.4085 27.1566 29.2694 28.4034C28.129 29.6514 24.9158 32.6673 24.9158 38.8013C24.9158 44.9353 29.3728 50.8638 29.9942 51.6964C30.6163 52.5275 38.5986 65.5182 51.2407 70.5157C61.7474 74.6688 63.8856 73.8428 66.1658 73.6346C68.4465 73.4271 73.5249 70.6195 74.561 67.7081C75.5978 64.7971 75.5978 62.3018 75.287 61.7804C74.9761 61.2609 74.1466 60.9489 72.9028 60.3257C71.659 59.7025 65.5437 56.6858 64.4038 56.2696C63.2635 55.8539 62.4344 55.6464 61.6049 56.8948C60.7754 58.1413 58.3936 60.9489 57.6676 61.7804C56.9424 62.6138 56.2164 62.7176 54.973 62.094C53.7284 61.4684 49.7228 60.1534 44.9704 55.9063C41.2729 52.6015 38.7767 48.5204 38.0511 47.272C37.3255 46.0256 37.9734 45.3499 38.5971 44.7286C39.1559 44.17 39.8413 43.2727 40.4638 42.545C41.0839 41.8168 41.2909 41.2974 41.7056 40.4659C42.1208 39.6336 41.913 38.9055 41.6026 38.2818C41.2909 37.6582 38.8739 31.4921 37.768 29.027Z" fill="white" />
                         </g>
                         <defs>
                             <linearGradient id="paint0_linear_158_1617" x1="4827.34" y1="9719.86" x2="4827.34" y2="1.74268" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#1FAF38" />
-                                <stop offset="1" stop-color="#60D669" />
+                                <stop stopColor="#1FAF38" />
+                                <stop offset="1" stopColor="#60D669" />
                             </linearGradient>
                             <linearGradient id="paint1_linear_158_1617" x1="4998.74" y1="10066.6" x2="4998.74" y2="0" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#F9F9F9" />
-                                <stop offset="1" stop-color="white" />
+                                <stop stopColor="#F9F9F9" />
+                                <stop offset="1" stopColor="white" />
                             </linearGradient>
                             <clipPath id="clip0_158_1617">
                                 <rect width="100" height="101" fill="white" />
@@ -77,7 +77,7 @@ export default function PatriceCommunity() {
                     </svg>
 
 
-                    <h1 className="text-black font-bold text-xl md:text-2xl xl:text-3xl 2xl:text-4xl">
+                    <h1 className="text-black font-bold text-base sm:text-lg md:text-2xl xl:text-3xl 2xl:text-[44px] whitespace-nowrap px-2">
                         +1 949 903 4188
                     </h1>
 
@@ -86,10 +86,31 @@ export default function PatriceCommunity() {
                         alt="QR Code"
                         width={105}
                         height={110}
-                        className="w-[70px] md:w-[90px] xl:w-[105px]"
+                        className="w-14 md:w-22.5 xl:w-26.25 shrink-0"
                     />
                 </div>
+                <div className="lg:col-span-2 flex justify-center">
+                    <div className="bg-[#FCEFE6] w-full lg:w-auto px-4 lg:px-8 py-5 lg:py-6 flex items-center justify-between flex-nowrap rounded-2xl">
+                        <svg width="100" height="100" className="w-12 md:w-20 lg:w-25 shrink-0" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M90.625 2.34411H9.375C7.53149 2.32535 5.75583 3.03868 4.43765 4.32757C3.11946 5.61647 2.36642 7.37565 2.34375 9.21911V90.7972C2.37051 92.638 3.12536 94.3932 4.4431 95.6787C5.76084 96.9642 7.53416 97.6754 9.375 97.6566H90.625C92.4686 97.6712 94.2431 96.9555 95.5606 95.6658C96.8781 94.3761 97.6315 92.6173 97.6562 90.7738V9.19567C97.6234 7.35762 96.8663 5.60682 95.5497 4.32384C94.2331 3.04087 92.4633 2.32941 90.625 2.34411Z" fill="#0076B2" />
+                            <path d="M16.4531 38.0703H30.6016V83.5938H16.4531V38.0703ZM23.5313 15.4141C25.154 15.4141 26.7403 15.8954 28.0895 16.7971C29.4386 17.6988 30.4901 18.9804 31.1107 20.4798C31.7313 21.9792 31.8933 23.6289 31.5762 25.2204C31.259 26.8119 30.477 28.2735 29.329 29.4204C28.181 30.5674 26.7186 31.348 25.1268 31.6636C23.535 31.9793 21.8854 31.8157 20.3866 31.1936C18.8878 30.5716 17.6072 29.5189 16.7068 28.1689C15.8064 26.8189 15.3266 25.2321 15.3281 23.6094C15.3302 21.4351 16.1954 19.3506 17.7335 17.8139C19.2717 16.2772 21.357 15.4141 23.5313 15.4141ZM39.4766 38.0703H53.0391V44.3203H53.2266C55.1172 40.7422 59.7266 36.9687 66.6094 36.9687C80.9375 36.9375 83.5938 46.3672 83.5938 58.5937V83.5938H69.4453V61.4453C69.4453 56.1719 69.3516 49.3828 62.0938 49.3828C54.8359 49.3828 53.6016 55.1328 53.6016 61.1016V83.5938H39.4766V38.0703Z" fill="white" />
+                        </svg>
 
+
+
+                        <h1 className="text-black font-bold text-base sm:text-lg md:text-2xl xl:text-3xl 2xl:text-[44px] whitespace-nowrap px-2">
+                            +1 949 903 4188
+                        </h1>
+
+                        <Image
+                            src="/assets/QR-scan.svg"
+                            alt="QR Code"
+                            width={105}
+                            height={110}
+                            className="w-14 md:w-22.5 xl:w-26.25 shrink-0"
+                        />
+                    </div>
+                </div>
             </div>
         </section>
     )

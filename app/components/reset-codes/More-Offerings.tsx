@@ -1,0 +1,89 @@
+import { ArrowUpRight } from "lucide-react";
+
+type Offering = {
+    id: string;
+    title: string;
+    description: string;
+    icon: "freedom" | "heart";
+};
+
+const offerings: Offering[] = [
+    {
+        id: "freedom",
+        title: "Freedom Codes",
+        description: "Release Old Patterns.\n Reclaim Your Inner Power.",
+        icon: "freedom",
+    },
+    {
+        id: "heart",
+        title: "Heart Codes",
+        description: "Regulate Stress. Feel\nConnected. Live with Ease.",
+        icon: "heart",
+    },
+];
+
+function OfferingIcon({ type }: { type: Offering["icon"] }) {
+    if (type === "freedom") {
+        return (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.455 2.30917L12 2.07617L11.545 2.30917C10.4003 2.89381 9.35705 3.65856 8.455 4.57417C9.76816 5.25726 10.9647 6.14428 12 7.20217C13.035 6.14436 14.2312 5.25735 15.544 4.57417C14.6423 3.65865 13.5993 2.89391 12.455 2.30917ZM10.699 8.73417C8.95498 6.89583 6.67295 5.65784 4.181 5.19817L3 4.98017V13.0002C2.9996 14.8065 3.54273 16.5711 4.55877 18.0646C5.57481 19.5581 7.01673 20.7113 8.697 21.3742C8.23404 19.9624 7.99877 18.4859 8 17.0002C8 13.9082 9.001 11.0502 10.699 8.73417ZM21 4.98117L19.82 5.19817C14.232 6.22417 10 11.1172 10 17.0002C10 18.5362 10.29 20.0072 10.817 21.3602L11.057 21.9752C11.371 21.9852 11.686 22.0002 12 22.0002C14.3869 22.0002 16.6761 21.052 18.364 19.3641C20.0518 17.6763 21 15.3871 21 13.0002V4.98117Z" fill="url(#paint0_linear_1388_816)" />
+                <defs>
+                    <linearGradient id="paint0_linear_1388_816" x1="21" y1="12.0382" x2="3" y2="12.0382" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#DA5B00" />
+                        <stop offset="1" stopColor="#E27B34" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        );
+    }
+
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.9999 1C13.0608 1 14.0782 1.42143 14.8283 2.17157C15.5785 2.92172 15.9999 3.93913 15.9999 5L15.9979 5.055L16.0279 5.037C16.8706 4.54815 17.8636 4.38621 18.8179 4.582L19.0549 4.638C19.56 4.77458 20.0332 5.00966 20.4471 5.32972C20.861 5.64979 21.2076 6.04852 21.4669 6.503C21.9944 7.42097 22.1375 8.51032 21.8649 9.53338C21.5924 10.5564 20.9263 11.4302 20.0119 11.964L19.9439 12L20.0149 12.039C20.8963 12.5544 21.5479 13.3865 21.8369 14.3658C22.1258 15.3451 22.0304 16.3977 21.5699 17.309L21.4689 17.495C21.2095 17.9501 20.8625 18.3494 20.4481 18.6698C20.0336 18.9902 19.5599 19.2254 19.0541 19.3619C18.5483 19.4983 18.0205 19.5334 17.5011 19.4649C16.9818 19.3964 16.4811 19.2259 16.0279 18.963L15.9979 18.943L15.9999 19C15.9999 20.0262 15.6055 21.0132 14.8982 21.7568C14.1909 22.5004 13.2249 22.9437 12.1999 22.995L11.9999 23C10.9391 23 9.92164 22.5786 9.17149 21.8284C8.42135 21.0783 7.99992 20.0609 7.99992 19L8.00092 18.944L7.97192 18.963C7.12938 19.4522 6.13637 19.6145 5.18192 19.419L4.94592 19.363C4.44063 19.2265 3.96731 18.9915 3.55319 18.6714C3.13908 18.3514 2.79234 17.9526 2.53292 17.498C2.00554 16.5804 1.86233 15.4914 2.13452 14.4686C2.4067 13.4458 3.0722 12.5721 3.98592 12.038L4.05592 12L3.98492 11.962C3.10353 11.4466 2.45191 10.6145 2.16296 9.63519C1.87401 8.65591 1.96949 7.6033 2.42992 6.692L2.52992 6.505C2.78935 6.04949 3.13643 5.64986 3.55112 5.32919C3.96581 5.00852 4.43991 4.77315 4.94604 4.63667C5.45218 4.50018 5.98033 4.46529 6.50002 4.534C7.01971 4.60272 7.52065 4.77367 7.97392 5.037L7.99992 5.055V5C7.99992 3.97376 8.39436 2.98677 9.10164 2.24319C9.80893 1.4996 10.775 1.05631 11.7999 1.005L11.9999 1ZM11.9999 9C11.2043 9 10.4412 9.31607 9.8786 9.87868C9.31599 10.4413 8.99992 11.2044 8.99992 12C8.99992 12.7956 9.31599 13.5587 9.8786 14.1213C10.4412 14.6839 11.2043 15 11.9999 15C12.7956 15 13.5586 14.6839 14.1212 14.1213C14.6839 13.5587 14.9999 12.7956 14.9999 12C14.9999 11.2044 14.6839 10.4413 14.1212 9.87868C13.5586 9.31607 12.7956 9 11.9999 9Z" fill="url(#paint0_linear_1570_637)" />
+            <defs>
+                <linearGradient id="paint0_linear_1570_637" x1="22.0008" y1="12" x2="1.99902" y2="12" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#DA5B00" />
+                    <stop offset="1" stopColor="#E27B34" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+    );
+}
+
+export default function ResetMoreOfferings() {
+    return (
+        <section className="w-full py-12 lg:py-16 xl:py-18">
+            <div className="max-w-7xl mx-auto w-full px-6 md:px-10 lg:px-12 xl:px-14">
+                <h2 className="text-center text-[#3E2925] text-4xl lg:text-5xl xl:text-[54px] font-bold leading-none">
+                    More Offerings
+                </h2>
+
+                <div className="mt-8 lg:mt-10 space-y-3">
+                    {offerings.map((offering) => (
+                        <div key={offering.id} className="rounded-lg bg-[#fcf1ea] px-6 py-6 lg:px-12 lg:py-8">
+                            <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1.2fr_1fr_auto] lg:items-center lg:gap-8">
+                                <div className="flex items-center gap-3">
+                                    <OfferingIcon type={offering.icon} />
+                                    <h3 className="text-black text-2xl lg:text-3xl xl:text-4xl leading-none tracking-tight">
+                                        {offering.title}
+                                    </h3>
+                                </div>
+
+                                <p className="text-black/50 text-base lg:text-lg xl:text-xl leading-tight whitespace-pre-line">
+                                    {offering.description}
+                                </p>
+
+                                <div className="flex justify-start lg:justify-end pt-1 lg:pt-0">
+                                    <span className="inline-flex h-8 w-8 lg:h-10 lg:w-10 items-center justify-center rounded-full bg-(--dark-orange)">
+                                        <ArrowUpRight className="h-5 w-5 text-white" strokeWidth={2.5} />
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
