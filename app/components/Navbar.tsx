@@ -43,7 +43,7 @@ export default function Navbar() {
             ],
         },
         { label: "Testimonials", href: "/testimonials" },
-        { label: "FAQs", href: "/faq" },
+        { label: "FAQs", href: "/FAQs" },
     ];
 
     return (
@@ -155,7 +155,8 @@ export default function Navbar() {
                         })}
                     </div>
 
-                    <div className="relative hidden lg:inline-block">
+                    <div className="relative hidden lg:inline-block" onClick={() => router.push('/connect')}
+                    >
                         {/* Offset border shape */}
                         <div className="absolute z-50 top-1.5 left-1.5 w-full h-full rounded-l-full border-2 border-black"></div>
 
