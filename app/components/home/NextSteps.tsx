@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function NextStep() {
     return (
-        <section className="max-w-7xl mx-auto relative w-full overflow-visible bg-white px-6 pt-12 md:px-10 lg:px-12 xl:px-14">
+        <section className="py-8 lg:py-12 xl:py-16 max-w-7xl mx-auto relative w-full overflow-visible bg-white px-6 pt-12 md:px-10 lg:px-12 xl:px-14">
             {/* Heading */}
             <div className="text-center mb-12">
             <h1 className="text-black text-2xl lg:text-3xl xl:text-[44px] font-bold text-center mb-6">

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutTherapist() {
     return (
-        <section className="max-w-7xl mx-auto w-full pt-12 px-6 md:px-10 lg:grid-cols-5 lg:px-12 xl:px-14 relative bg-white overflow-visible">
+        <section className="py-8 lg:py-12 xl:py-16 max-w-7xl mx-auto w-full pt-12 px-6 md:px-10 lg:grid-cols-5 lg:px-12 xl:px-14 relative bg-white overflow-visible">
             <h1 className="text-black text-2xl lg:text-3xl xl:text-[44px] font-bold text-center mb-6">
                 About Your Therapist
             </h1>
@@ -11,7 +11,7 @@ export default function AboutTherapist() {
                 <div className="grid grid-cols-1 lg:grid-cols-7 items-center gap-12 lg:gap-16 xl:gap-24">
                     <div className="relative col-span-3">
                         <div
-                            className="w-[320px] h-100 md:w-87.5:md:h-110:wlg:w-92.5h-[480px] xl:w-117.5l:h-[650px] 
+                            className="w-[320px] h-100 md:w-87.5:md:h-110:wlg:w-92.5h-[480px] xl:w-117.5 xl:h-[650px] 
         rounded-t-[320px] overflow-hidden p-px"
                             style={{ background: "linear-gradient(to right, var(--dark-gold), var(--light-gold))" }}
                         >

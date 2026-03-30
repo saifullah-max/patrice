@@ -1,10 +1,13 @@
+'use client'
 import { ArrowUpRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 type Offering = {
     id: string;
     title: string;
     description: string;
     icon: "freedom" | "heart";
+    link: string
 };
 
 const offerings: Offering[] = [
@@ -13,16 +16,19 @@ const offerings: Offering[] = [
         title: "Freedom Codes",
         description: "Release Old Patterns.\n Reclaim Your Inner Power.",
         icon: "freedom",
+        link: '/freedom-codes'
     },
     {
         id: "heart",
         title: "Heart Codes",
         description: "Regulate Stress. Feel\nConnected. Live with Ease.",
         icon: "heart",
+        link: '/heart-codes'
     },
 ];
 
 function OfferingIcon({ type }: { type: Offering["icon"] }) {
+
     if (type === "freedom") {
         return (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,6 +58,8 @@ function OfferingIcon({ type }: { type: Offering["icon"] }) {
 }
 
 export default function ResetMoreOfferings() {
+    const router = useRouter();
+
     return (
         <section className="w-full py-12 lg:py-16 xl:py-18">
             <div className="max-w-7xl mx-auto w-full px-6 md:px-10 lg:px-12 xl:px-14">
@@ -63,22 +71,40 @@ export default function ResetMoreOfferings() {
                     {offerings.map((offering) => (
                         <div key={offering.id} className="rounded-lg bg-[#fcf1ea] px-6 py-6 lg:px-12 lg:py-8">
                             <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1.2fr_1fr_auto] lg:items-center lg:gap-8">
-                                <div className="flex items-center gap-3">
-                                    <OfferingIcon type={offering.icon} />
-                                    <h3 className="text-black text-2xl lg:text-3xl xl:text-4xl leading-none tracking-tight">
-                                        {offering.title}
-                                    </h3>
+
+                                {/* Title + Arrow (same row on mobile) */}
+                                <div className="flex items-center justify-between lg:justify-start gap-3">
+                                    <div className="flex items-center gap-3">
+                                        <OfferingIcon type={offering.icon} />
+                                        <h3 className="text-black text-2xl lg:text-3xl xl:text-4xl leading-none tracking-tight">
+                                            {offering.title}
+                                        </h3>
+                                    </div>
+
+                                    {/* Arrow (mobile only here) */}
+                                    <span
+                                        className="inline-flex lg:hidden h-8 w-8 items-center justify-center rounded-full bg-(--dark-orange)"
+                                        onClick={() => router.push(offering.link)}
+                                    >
+                                        <ArrowUpRight className="h-5 w-5 text-white" strokeWidth={2.5} />
+                                    </span>
                                 </div>
 
+                                {/* Description */}
                                 <p className="text-black/50 text-base lg:text-lg xl:text-xl leading-tight whitespace-pre-line">
                                     {offering.description}
                                 </p>
 
-                                <div className="flex justify-start lg:justify-end pt-1 lg:pt-0">
-                                    <span className="inline-flex h-8 w-8 lg:h-10 lg:w-10 items-center justify-center rounded-full bg-(--dark-orange)">
+                                {/* Arrow (desktop only - original position) */}
+                                <div className="hidden lg:flex justify-end pt-1 lg:pt-0">
+                                    <span
+                                        className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-(--dark-orange)"
+                                        onClick={() => router.push(offering.link)}
+                                    >
                                         <ArrowUpRight className="h-5 w-5 text-white" strokeWidth={2.5} />
                                     </span>
                                 </div>
+
                             </div>
                         </div>
                     ))}

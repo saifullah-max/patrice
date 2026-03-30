@@ -1,6 +1,6 @@
 export default function SelfAware() {
     return (
-        <section className="pt-12 flex justify-center overflow-x-hidden max-w-7xl mx-auto">
+        <section className="pt-12 flex justify-center overflow-x-hidden max-w-7xl mx-auto py-8 lg:py-12 xl:py-16">
             <div className="relative max-w-6xl w-full">
                 {/* CARD */}
                 <div className="bg-[#E27B34] px-6 py-6 lg:py-12 xl:py-14 rounded-2xl xl:rounded-4xl my-4 mx-4" style={{

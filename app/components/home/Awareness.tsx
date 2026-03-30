@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Awareness() {
     return (
-        <section className="relative overflow-hidden pt-12 mx-auto max-w-7xl">
+        <section className="relative overflow-hidden pt-12 mx-auto max-w-7xl py-8 lg:py-12 xl:py-16">
             <div className="flex justify-center">
                 <Image
                     src='/assets/awareness-bg-star.png'

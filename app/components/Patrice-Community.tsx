@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function PatriceCommunity() {
     return (
-        <section className="max-w-7xl mx-auto w-full pt-12 px-4 md:px-0 relative bg-white overflow-hidden">
+        <section className="py-8 lg:py-12 xl:py-16 max-w-7xl mx-auto w-full pt-12 px-4 md:px-0 relative bg-white overflow-hidden">
             <div className="flex justify-center flex-col text-center mb-6">
                 <h1 className="text-black text-2xl lg:text-3xl xl:text-[44px] font-bold text-center mb-4">
                     Join Dr. Patrice Khan Community

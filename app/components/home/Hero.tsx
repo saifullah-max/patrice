@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
     return (
         <section>
-            <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-0 px-6 py-8 md:px-10 lg:grid-cols-5 lg:px-12 xl:px-14">
+            <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-0 px-6 py-8 lg:py-12 xl:py-16 md:px-10 lg:grid-cols-5 lg:px-12 xl:px-14">
                 <div className="relative lg:col-span-3">
                     <h1 className="text-6xl md:text-[64px] lg:text-7xl xl:text-[86px] 2xl:text-[96px] font-semibold leading-[1.05] tracking-tight text-black lg:text-[64px]">
                         <span>From stuck to</span>

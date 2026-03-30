@@ -18,7 +18,7 @@ const personas = [
 
 export default function WhoIServe() {
     return (
-        <section className="px-6 pt-12 md:px-10 lg:px-12 xl:px-14 flex justify-center relative overflow-hidden max-w-7xl mx-auto">
+        <section className="py-8 lg:py-12 xl:py-16 px-6 pt-12 md:px-10 lg:px-12 xl:px-14 flex justify-center relative overflow-hidden max-w-7xl mx-auto">
             <div className="text-center relative z-10">
                 <h1 className="text-black text-2xl lg:text-3xl xl:text-[44px] font-bold text-center">
                     Who I Serve

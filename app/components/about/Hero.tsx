@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function AboutHero() {
     return (
-        <section className="max-w-7xl mx-auto w-full pt-12 px-6 md:px-10 lg:grid-cols-5 lg:px-12 xl:px-14 relative bg-white overflow-visible">
+        <section className="pb-8 lg:pb-12 xl:pb-16 pt-4 max-w-7xl mx-auto w-full px-6 md:px-10 lg:grid-cols-5 lg:px-12 xl:px-14 relative bg-white overflow-visible">
             <div className="relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-7 items-stretch gap-12 lg:gap-16 xl:gap-24">
                     <div className="relative col-span-3">
                         <div
-                            className="w-107.5 h-150 md:w-112.5 md:h-175 lg:w-125 lg:h-200 xl:w-137.5 xl:h-225 
+                            className="w-90 h-150 md:w-112.5 md:h-175 lg:w-125 lg:h-200 xl:w-137.5 xl:h-225 
         rounded-t-[320px] overflow-hidden p-px"
                             // style={{ background: "linear-gradient(to right, var(--dark-gold), var(--light-gold))" }}
                             style={{ background: "var(--dark-gold)" }}

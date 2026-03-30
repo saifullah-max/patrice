@@ -54,7 +54,7 @@ const services = [
 
 export default function Services() {
     return (
-        <section className="px-6 pt-12 md:px-10 lg:px-12 xl:px-14 max-w-7xl mx-auto">
+        <section className="px-6 pt-12 md:px-10 lg:px-12 xl:px-14 max-w-7xl mx-auto py-8 lg:py-12 xl:py-16">
             <div className="flex justify-center flex-col text-center">
                 <h1 className="text-black text-2xl lg:text-3xl xl:text-[44px] font-bold text-center">
                     Signature offering

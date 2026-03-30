@@ -74,7 +74,7 @@ export default function ConnectHero() {
         <section className="w-full bg-[#FCEFE6]">
             <div className="max-w-7xl mx-auto w-full px-6 py-12 md:px-10 lg:px-12 xl:px-14 lg:py-16 xl:py-20">
                 <div className="text-center">
-                    <h1 className="text-[#3E2925] text-4xl lg:text-5xl xl:text-[54px] font-bold leading-tight tracking-tight">
+                    <h1 className="text-[#3E2925] text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
                         Contact Me
                     </h1>
                 </div>
