@@ -1,6 +1,11 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function AboutTherapist() {
+    const router = useRouter();
+
     return (
         <section className="py-8 lg:py-12 xl:py-16 max-w-7xl mx-auto w-full pt-12 px-6 md:px-10 lg:grid-cols-5 lg:px-12 xl:px-14 relative bg-white overflow-visible">
             <h1 className="text-black text-2xl lg:text-3xl xl:text-[44px] font-bold text-center mb-6">
@@ -55,13 +60,16 @@ export default function AboutTherapist() {
                             </p>
                         </div>
 
-                        <div className="relative inline-block mt-6 lg:mt-8 xl:mt-10">
+                        <div
+                            className="relative hidden lg:inline-block group cursor-pointer"
+                            onClick={() => router.push('/connect')}
+                        >
                             {/* Offset border shape */}
-                            <div className="absolute z-50 top-1.5eft-[6px] w-full h-full rounded-l-full border-2 border-black"></div>
+                            <div className="absolute z-20 top-2 right-2 w-full h-full rounded-r-full border-2 border-black transition-all duration-200"></div>
 
                             {/* Button */}
                             <button
-                                className="relative py-4 px-10 rounded-l-full text-white font-medium text-base lg:text-lg"
+                                className="relative py-4 px-10 rounded-r-full text-white font-medium transition-all duration-600 group-hover:-translate-x-3.5 group-hover:translate-y-4.5"
                                 style={{
                                     background: 'linear-gradient(to right, var(--light-orange), var(--dark-orange))'
                                 }}

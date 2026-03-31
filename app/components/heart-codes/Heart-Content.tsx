@@ -1,6 +1,10 @@
+'use client'
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function HeartContent() {
+    const router = useRouter();
     return (
         <>
             <section>
@@ -438,12 +442,16 @@ export default function HeartContent() {
                                     You don’t have to change who you are. You only need to reconnect with what’s already within you.
                                 </p>
 
-                                <div className="relative inline-block w-fit mt-4">
+                                <div
+                                    className="relative hidden lg:inline-block group cursor-pointer w-fit"
+                                    onClick={() => router.push('/connect')}
+                                >
                                     {/* Offset border shape */}
-                                    <div className="absolute top-2.5 -left-1.5 w-full h-full rounded-r-full border-2 border-black z-50"></div>
+                                    <div className="absolute z-20 top-2 right-2 w-full h-full rounded-r-full border-2 border-black transition-all duration-200"></div>
+
                                     {/* Button */}
                                     <button
-                                        className="relative py-4 px-10 rounded-r-full text-white font-medium text-sm lg:text-base xl:text-lg"
+                                        className="relative py-4 px-10 rounded-r-full text-white font-medium transition-all duration-600 group-hover:-translate-x-3.5 group-hover:translate-y-4.5"
                                         style={{
                                             background: 'linear-gradient(to right, var(--light-orange), var(--dark-orange))'
                                         }}

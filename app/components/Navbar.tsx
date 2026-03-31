@@ -155,14 +155,16 @@ export default function Navbar() {
                         })}
                     </div>
 
-                    <div className="relative hidden lg:inline-block" onClick={() => router.push('/connect')}
+                    <div
+                        className="relative hidden lg:inline-block group cursor-pointer"
+                        onClick={() => router.push('/connect')}
                     >
                         {/* Offset border shape */}
-                        <div className="absolute z-50 top-1.5 left-1.5 w-full h-full rounded-l-full border-2 border-black"></div>
+                        <div className="absolute z-20 top-1.5 left-1.5 w-full h-full rounded-l-full border-2 border-black transition-all duration-200"></div>
 
                         {/* Button */}
                         <button
-                            className="relative py-4 px-10 rounded-l-full text-white font-medium"
+                            className="relative py-4 px-10 rounded-l-full text-white font-medium transition-all duration-600 group-hover:translate-x-3.5 group-hover:translate-y-3.5"
                             style={{
                                 background: 'linear-gradient(to right, var(--light-orange), var(--dark-orange))'
                             }}

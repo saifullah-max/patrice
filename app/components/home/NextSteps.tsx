@@ -1,11 +1,15 @@
+'use client'
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function NextStep() {
+    const router = useRouter();
+
     return (
         <section className="py-8 lg:py-12 xl:py-16 max-w-7xl mx-auto relative w-full overflow-visible bg-white px-6 pt-12 md:px-10 lg:px-12 xl:px-14">
             {/* Heading */}
             <div className="text-center mb-12">
-            <h1 className="text-black text-2xl lg:text-3xl xl:text-[44px] font-bold text-center mb-6">
+                <h1 className="text-black text-2xl lg:text-3xl xl:text-[44px] font-bold text-center mb-6">
                     Your Next Step
                 </h1>
             </div>
@@ -27,18 +31,21 @@ export default function NextStep() {
                             <li>• Just insight and alignment.</li>
                         </ul>
 
-                        <div className="relative inline-block mt-6 lg:mt-8 xl:mt-10">
+                        <div
+                            className="relative hidden lg:inline-block group cursor-pointer"
+                            onClick={() => router.push('/connect')}
+                        >
                             {/* Offset border shape */}
-                            <div className="absolute z-50 top-[10px] -left-[6px] w-full h-full rounded-r-full border-2 border-black"></div>
+                            <div className="absolute z-20 top-2 right-2 w-full h-full rounded-r-full border-2 border-black transition-all duration-200"></div>
 
                             {/* Button */}
                             <button
-                                className="relative py-4 px-10 rounded-r-full text-black font-medium text-sm lg:text-base xl:text-lg"
+                                className="relative py-4 px-10 rounded-r-full text-black font-medium transition-all duration-600 group-hover:-translate-x-3.5 group-hover:translate-y-4.5"
                                 style={{
                                     background: 'white'
                                 }}
                             >
-                                Schedule A Clarity Call
+                                Book Your Therapist
                             </button>
                         </div>
                     </div>

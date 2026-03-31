@@ -82,7 +82,10 @@ export default function FAQContent() {
                                         }`}
                                     aria-expanded={isOpen}
                                 >
-                                    <h3 className="text-black text-xl lg:text-2xl xl:text-[26px] leading-snug pr-4 pb-4">
+                                    <h3
+                                        className={`text-xl lg:text-2xl xl:text-[26px] leading-snug pr-4 pb-4 transition-colors duration-300 ${isOpen ? "text-[var(--light-orange)]" : "text-black"
+                                            }`}
+                                    >
                                         {faq.question}
                                     </h3>
                                     <ChevronDown
@@ -133,18 +136,22 @@ export default function FAQContent() {
                         If this feels familiar, it may be time to write your own chapter. Growth doesn’t happen overnight — it happens through small, meaningful progress.
                     </p>
 
-                    <div className="relative inline-block w-fit mt-8 lg:mt-12">
-                        {/* Offset border shape */}
-                        <div className="absolute top-2.5 -left-1.5 w-full h-full rounded-r-full border-2 border-black z-50"></div>
-                        {/* Button */}
-                        <button
-                            className="relative py-4 px-10 rounded-r-full text-white font-medium text-sm lg:text-base xl:text-lg"
-                            style={{
-                                background: 'linear-gradient(to right, var(--light-orange), var(--dark-orange))'
-                            }}
-                        >
-                            Schedule A Session.
-                        </button>
+                    <div className="mt-8 lg:mt-10 flex justify-center">
+                        <div className="relative inline-block group cursor-pointer">
+
+                            {/* Offset border shape */}
+                            <div className="absolute z-20 top-2.5 -left-1.5 h-full w-full rounded-r-full border-2 border-black transition-all duration-200"></div>
+
+                            {/* Button */}
+                            <button
+                                className="relative py-4 px-10 rounded-r-full text-white font-medium text-sm lg:text-base xl:text-lg transition-all duration-300 group-hover:-translate-x-3.5 group-hover:translate-y-4.5"
+                                style={{
+                                    background: "linear-gradient(to right, var(--light-orange), var(--dark-orange))"
+                                }}
+                            >
+                                Schedule A Session
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

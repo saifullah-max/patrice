@@ -1,6 +1,11 @@
+'use client'
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function ResetContent() {
+    const router = useRouter(
+
+    )
     return (
         <>
             <section className="max-w-7xl mx-auto w-full px-6 py-12 md:px-10 lg:px-12 xl:px-14">
@@ -403,11 +408,14 @@ export default function ResetContent() {
                     </div>
 
                     <div className="mt-8 lg:mt-10 flex justify-center">
-                        <div className="relative inline-block">
-                            <div className="absolute z-50 top-2.5 -left-1.5 h-full w-full rounded-r-full border-2 border-black"></div>
+                        <div className="relative inline-block group cursor-pointer">
 
+                            {/* Offset border shape */}
+                            <div className="absolute z-20 top-2.5 -left-1.5 h-full w-full rounded-r-full border-2 border-black transition-all duration-200"></div>
+
+                            {/* Button */}
                             <button
-                                className="relative py-4 px-10 rounded-r-full text-white font-medium text-sm lg:text-base xl:text-lg"
+                                className="relative py-4 px-10 rounded-r-full text-white font-medium text-sm lg:text-base xl:text-lg transition-all duration-300 group-hover:-translate-x-3.5 group-hover:translate-y-4.5"
                                 style={{
                                     background: "linear-gradient(to right, var(--light-orange), var(--dark-orange))"
                                 }}
@@ -416,6 +424,7 @@ export default function ResetContent() {
                             </button>
                         </div>
                     </div>
+
                 </div>
             </section>
         </>
